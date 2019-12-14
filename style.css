@@ -275,11 +275,13 @@ img {
 .bg-overlay2 {
   position: relative;
   z-index: 2;
+  background: url();
+  /* opacity: 0.7; */
   background-position: center center;
-  background-size: cover; }
+  background-size: 80%; }
   .bg-overlay2::after {
-    background-color: rgba(21, 4, 48, 0.5);
     position: absolute;
+    /* background: url('./img/8WbS.gif'); */
     z-index: -1;
     top: 0;
     left: 0;
@@ -517,8 +519,9 @@ img {
     margin-bottom: 15px; }
   .slide-down .line {
     width: 3px;
-    height: 60px;
+    height: 5px;
     margin: 0 auto;
+    /* margin-bottom: 300px; */
     background-color: #451621;
     -webkit-animation: slide_down 2s linear infinite;
     animation: slide_down 2s linear infinite; }
@@ -547,7 +550,7 @@ img {
 
 .single-hero-slide {
   width: 100%;
-  height: 110vh;
+  height: 100vh;
   position: relative;
   z-index: 1;
   padding: 0 30px;
@@ -669,7 +672,7 @@ img {
   color: #451621;
   margin-bottom: 50px; }
 .about-content p {
-  color: #451621;
+  color: #000000;
   font-size: 1.5em;
   font-family: 'Oswald', sans-serif;
   text-align: justify;
@@ -679,7 +682,7 @@ img {
 .my-content p {
   margin-top: -4em;
   color: #ffe607;
-  font-size: 2em;
+  font-size: 1.5em;
   font-family: 'Oswald', sans-serif;
 }
 
@@ -1952,3 +1955,60 @@ img {
 /* ====== The End ====== */
 
 /*# sourceMappingURL=style.css.map */
+
+
+
+.curtain {
+  width: 50%;
+  height: 90vh;
+  float: left;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.curtain-left {
+  animation-name: go-left;
+
+}
+
+.curtain-right {
+  animation-name: go-right;
+}
+
+@keyframes go-left {
+  0% {
+      transform: translate(0%, 0%);
+  }
+  100% {
+      transform: translate(-100%, 0%);
+  }
+}
+
+@keyframes go-right {
+  0% {
+      transform: translate(0%, 0%);
+  }
+  100% {
+      transform: translate(100%, 0%);
+  }
+}
+
+.curtain-element {
+  width: 10%;
+  height: 100%;
+  float: left;
+  border-bottom-right-radius: 67px;
+  border-bottom-left-radius: 67px;
+}
+
+/* Alternating color of curtain pieces */
+
+.curtain-element:nth-child(odd) {
+  background-color: #ba0f0f;
+}
+
+.curtain-element:nth-child(even) {
+  background-color: #d72525;
+}
