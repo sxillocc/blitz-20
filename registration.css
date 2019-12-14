@@ -43,4 +43,10 @@
     color: #c6dede;
     transform: translate(-25px, 25px) rotate(-55deg);
 }
+
+@media(max-width:767px){
+    .ticket{
+        margin-top: 30px;
+    }
+}
  
