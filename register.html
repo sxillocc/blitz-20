@@ -67,63 +67,105 @@
     <section class="hero-area">
             <div class="single-hero-slide d-flex align-items-center justify-content-center">
                 <div class="hero-slides-content text-center">
-                        <div class="ticket">
-                                <div class="ticket__content">
-                                    <h1>Step by step form</h1>
-                                    <h2>Just practising Javascript</h2>
-                                    <form>
-                                        <ul class="items"></ul>
-                                        <fieldset class="username enable">
-                                            <div class="icon left"><i class="user"></i></div><input type="text" name="username" placeholder="Username" />
-                                            <div class="icon right button"><i class="arrow"></i></div>
-                                        </fieldset>
-                                        <fieldset class="email">
-                                            <div class="icon left"><i class="letter"></i></div><input type="mail" name="email" placeholder="Email" />
-                                            <div class="icon right button"><i class="arrow"></i></div>
-                                        </fieldset>
-                                        <fieldset class="password">
-                                            <div class="icon left"><i class="lock"></i></div><input type="password" name="password" placeholder="Password" />
-                                            <div class="icon right button"><i class="arrow"></i></div>
-                                        </fieldset>
-                                        <fieldset class="thanks">
-                                            <div class="icon left"><i class="heart"></i></div>
-                                            <p>Thanks for your time</p>
-                                            <div class="icon right"><i class="heart"></i></div>
-                                        </fieldset>
-                                    </form>
+                    <h3 class="animated FadeInOut delay-1s">Welcome!</h3> <br>
+                    <h4>Get your ticket for Blitzschlag'20</h4> <hr color="black">
+                    <button type="button" class="main-btn-rect popup-btn" data-popup="popup-reg">Click me</button>
+                    <div id="popup-reg" class="popup">
+                    <center><div class="popup-content">
+                        <div class="event-header">
+                        <h6>Get your Ticket!</h6>
+                        </div>
+                        <form id="send" class="send-form">
+                            <div class="form-group">
+                            <input type="text" placeholder="Enter Full Name" id="name" name="name" required="required">
+                            <label for="name">
+                            </label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Enter mail..." id="mail" name="mail" required="required">
+                                <label for="mail">
+                                </label>
                                 </div>
-                                </div>
-            
+                            <div class="form-group">
+                            <input type="tel" placeholder="Enter Contact Number" id="phone" name="phone" required="required">
+                            <label for="phone">
+                            </label>
+                            </div>
+                            <div class="form-group">
+                                
+                                <input type="text" placeholder="Enter Password" id="password" name="password" required="required">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Confirm Password" id="password" name="password" required="required">
+                            </div>
+                            <div class="form-group">
+                                <select class="form-group" name="course">
+                                    <option>-Select Course-</option>
+                                    <option value="B-Tech">B-Tech</option>
+                                    <option value="B-Arch">B-Arch</option>
+                                    <option value="PHD">PHD</option>
+                                    <option value="M-Tech">M-Tech</option>
+                                    <option value="M-Plan">M-Plan</option>
+                                    <option value="OTHER">OTHER</option>
+                                </select>
+                            </div> <br>
+                            <div class="form-group">
+                                <select class="form-group" name="year">
+                                    <option>-Select Year-</option>
+                                    <option value="I Year">I Year</option>
+                                    <option value="II Year">II Year</option>
+                                    <option value="III Year">III Year</option>
+                                    <option value="IV Year">IV Year</option>
+                                    <option value="V Year">V Year</option>
+                            <option value="OTHER">OTHER</option>
+                                </select>
+                            </div> <br>
+                            <div class="form-group">
+                                <input type="text" placeholder="Enter your college" id="college" name="college" required="required"> 
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Enter your collegeID" id="collegeid" name="collegeid" required="required"> 
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Enter City" id="city" name="city" required="required"> 
+                            </div>
+                             
+                            <button type="submit" class="main-btn-rect" name="text" value="Send">Book</button>
+                        </form>
+                        <span class="fade-out main-btn-circle">╳</span>
+                    </div></center>
+                    </div>
                     </div>
                    </div>
                    </section>
 
     <!-- ##### Footer Area Start ##### -->
-    <footer class="footer-area section-padding-100-0">
+    <footer style="background: #CAB9A9" class="footer-area section-padding-100-0">
         <div class="container-fluid">
             <div class="row">
 
                 <!-- Footer Widget Area -->
-                <div class="col-12 col-md-6 col-xl-3">
+                <div class="col-12 col-md-6 col-xl-4">
                     <div class="footer-widget-area mb-100">
-                        <a href="#"><img src="img/trblitz.png" alt=""></a>
+                        <a href="https://blitzschlag.org"><img src="img/trblitz.png" alt=""></a>
                         <p class="copywrite-text"><a href="#"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | </p>
                     </div>
                 </div>
 
                 <!-- Footer Widget Area -->
-                <div class="col-12 col-sm-4 col-xl-2">
+                <div class="col-12 col-sm-4 col-xl-1">
                     <div class="footer-widget-area mb-100">
                         <div class="widget-title">
-                            <h4>About</h4>
+                            <h4><strong><u>SOCIAL</u></strong></h4>
                         </div>
                         <nav>
                             <ul class="footer-nav">
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Our Services</a></li>
-                                <li><a href="#">The team</a></li>
-                                <li><a href="#">Careers</a></li>
+                                <li><a href="https://Instagram.com/Blitzmnit/"><img src="./img/ig.png"></a></li>
+                                <li> <a href="https://Instagram.com/Blitzmnit/"><img src="./img/fb.png"></a></li>
+                                    <li><a href="https://Instagram.com/Blitzmnit/"><img src="./img/twitter.png"></a></li>
+                                </ul>
+                                
                             </ul>
                         </nav>
                     </div>
@@ -133,15 +175,13 @@
                 <div class="col-12 col-sm-4 col-xl-2">
                     <div class="footer-widget-area mb-100">
                         <div class="widget-title">
-                            <h4>Links</h4>
+                            <h4><strong><u>LINKS</u></strong></h4>
                         </div>
                         <nav>
                             <ul class="footer-nav">
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Our Services</a></li>
-                                <li><a href="#">The team</a></li>
-                                <li><a href="#">Careers</a></li>
-                            </ul>
+                                <li><a>Register</a></li>
+                                <li><a>Events</a></li>
+                                <li><a>Pronites</a></li>
                         </nav>
                     </div>
                 </div>
@@ -150,31 +190,28 @@
                 <div class="col-12 col-sm-4 col-xl-2">
                     <div class="footer-widget-area mb-100">
                         <div class="widget-title">
-                            <h4>Social</h4>
+                            <h4><strong><u>SUPPORT</u></strong></h4>
                         </div>
                         <nav>
                             <ul class="footer-nav">
-                                <li><a href="#">Facebook</a></li>
-                                <li><a href="#">Twitter</a></li>
-                                <li><a href="#">Snapchat</a></li>
-                                <li><a href="#">Instagram</a></li>
+                                    <li><a>FAQ</a></li>
+                                    <li><a>Contact Us</a></li>
+                                    <li><a>Accomodation</a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
 
+                <!-- Footer Widget Area -->
                 <!-- Footer Widget Area -->
                 <div class="col-12 col-md-6 col-xl-3">
-                    <div class="footer-widget-area mb-100">
-                        <div class="widget-title">
-                            <h4>Subscribe</h4>
+                        <div class="footer-widget-area mb-100">
+                            <div class="widget-title">
+                                <img src="./img/queen.jpg">
+                                <hr>
+                            </div>
                         </div>
-                        <form action="#" method="post" class="subscribe-form">
-                            <input type="email" name="subscribe-email" id="subscribeemail">
-                            <button type="submit">subscribe</button>
-                        </form>
                     </div>
-                </div>
 
             </div>
         </div>
@@ -226,7 +263,7 @@
             }
         })
         </script>
-        
+        <script src="registration.js"></script>
 </body>
 
 </html>
