@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Girassol&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Neuton&display=swap');
 html {
   font-size: 10px;
 }
@@ -13,8 +14,7 @@ html, body {
 }
 
 body {
-  background: #111111;
-  font-family: "metropolis-regular", sans-serif;
+  font-family: "Neuton", sans-serif;
   font-size: 1.7rem;
   font-style: normal;
   font-weight: normal;
@@ -50,7 +50,7 @@ a:active {
  * 
  * ------------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "metropolis-semibold", sans-serif;
+  font-family: "Neuton", sans-serif;
   color: #000000;
   font-style: normal;
   font-weight: normal;
@@ -128,7 +128,7 @@ p img {
 }
 
 p.lead {
-  font-family: "metropolis-regular", sans-serif;
+  font-family: "Neuton", sans-serif;
   font-size: 2.4rem;
   line-height: 1.75;
   margin-bottom: 3.6rem;
@@ -162,7 +162,7 @@ em, i {
 }
 
 strong, b {
-  font-family: "metropolis-semibold", sans-serif;
+  font-family: "Neuton", sans-serif;
   font-weight: normal;
 }
 
@@ -190,7 +190,7 @@ blockquote:before {
 }
 
 blockquote p {
-  font-family: "metropolis-regular", sans-serif;
+  font-family: "Neuton", sans-serif;
   padding: 0;
   font-size: 2.1rem;
   line-height: 1.857;
@@ -566,7 +566,7 @@ select {
   border: 0;
   outline: none;
   color: #451621;
-  font-family: "metropolis-regular", sans-serif;
+  font-family: "Neuton", sans-serif;
   font-size: 1.5rem;
   line-height: 3rem;
   max-width: 100%;
@@ -643,8 +643,8 @@ select:focus {
 
 label,
 legend {
-  font-family: "metropolis-semibold", sans-serif;
-  font-size: 1.4rem;
+  font-family: "Neuton", sans-serif;
+  font-size: 2rem;
   font-weight: normal;
   margin-bottom: 0.9rem;
   line-height: 1.714;
@@ -1156,16 +1156,13 @@ input::-moz-focus-inner {
   max-width: 800px;
 }
 
-.light-gray {
-  background-color: #f1f1f1;
-}
 
 
 /* ------------------------------------------------------------------- 
  * ## display headings
  * ------------------------------------------------------------------- */
 .display-1 {
-  font-family: "domine-bold", sans-serif;
+  font-family: "Neuton", sans-serif;
   font-size: 1.5em;
   line-height: 1.3;
   letter-spacing: 0;
@@ -1174,20 +1171,20 @@ input::-moz-focus-inner {
   margin-top: 0;
   margin-bottom: 4.8rem;
   text-align: justify;
-  /* margin-left: 2em;
-  margin-right: 2em; */
+  /* margin-left: 4em;
+  margin-right: 4em;  */
 }
 .display-1--light {
-  color: #ffffff;
+  color: #F0E4D3;
 }
 
 .subhead {
-  font-family: "metropolis-semibold", sans-serif;
+  font-family: "Neuton", sans-serif;
   font-size: 3rem;
   line-height: 1.3125;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
-  color: #e2d2b5;
+  color: #000000;
   margin-top: 0;
   margin-bottom: 2.1rem;
 }
@@ -1299,7 +1296,7 @@ input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 .header-nav {
   z-index: 900;
-  font-family: "Girassol", sans-serif;
+  font-family: 'Neuton', sans-serif;
   font-size: 2rem;
   line-height: 1.846;
   padding: 3.6rem 3rem 3.6rem 3.6rem;
@@ -1324,7 +1321,7 @@ input::-moz-focus-inner {
 .header-nav a,
 .header-nav a:visited {
   color: rgba(255, 255, 255, 0.5);
-  font-family: 'Girassol', sans-serif;
+  font-family: 'Neuton', sans-serif;
   font-size: 2em;
   padding-top: 1em;
 }
@@ -1811,16 +1808,17 @@ input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 .home-social {
   list-style: none;
-  font-size: 14px;
+  font-size: 25px;
   line-height: 4.8rem;
   margin: 0;
-  color: #ffffff;
+  color: #e2d2b5;
   position: absolute;
   bottom: 6.6rem;
   left: 110px;
 }
 .home-social a {
-  color: #ffffff;
+  color: #e2d2b5;
+  font-size: 2rem;
   border-bottom: 1px solid transparent;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -1832,7 +1830,7 @@ input::-moz-focus-inner {
   display: none;
 }
 .home-social .home-social-title {
-  font-family: "metropolis-semibold", sans-serif;
+  font-family: "Neuton", sans-serif;
   padding-right: 4rem;
   margin-right: 0.8rem;
   position: relative;
@@ -1945,7 +1943,7 @@ html.no-csstransitions .home-content__main {
   }
 
   .home-content__main {
-    padding-top: 18rem;
+    padding-top: 7rem;
   }
 
   .home-sidelinks {
@@ -2166,7 +2164,8 @@ html.no-csstransitions .home-content__main {
 .s-about {
   padding-top: 18rem;
   padding-bottom: 18rem;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
+  /* background: url('./images/bg4.png'); */
   position: relative;
 }
 
@@ -2927,20 +2926,20 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-contact {
-  /* padding-top: 21rem; */
-  padding-bottom: 10.2rem;
-  background-color: rgb(48, 10, 10);
-  color: #e2d2b5;
+  height: 120vh;
+  padding-bottom: 10rem;
+  color: #000000;
   position: relative;
+  font-size: 1rem;
 }
 .s-contact a {
-  color: #e2d2b5;
+  color: #000000;
   border-bottom: 1px solid transparent;
   display: inline-block;
 }
 .s-contact a:hover,
 .s-contact a:focus {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid rgba(255, 255, 255);
 }
 
 .contact-main {
@@ -2950,7 +2949,7 @@ html.no-csstransitions .home-content__main {
 
 .contact-email {
   display: inline-block;
-  font-family: "metropolis-light", sans-serif;
+  font-family: "Neuton", sans-serif;
   font-size: 5.4rem;
   line-height: 1.222;
   color: #ffffff;
@@ -2969,14 +2968,14 @@ html.no-csstransitions .home-content__main {
 }
 
 .contact-number {
-  font-family: "metropolis-light", sans-serif;
+  font-family: "Neuton", sans-serif;
   font-size: 3rem;
   line-height: 1.7;
   display: block;
 }
 
 .contact-address {
-  font-family: "metropolis-regular", sans-serif;
+  font-family: "Neuton", sans-serif;
   font-size: 2.8rem;
   line-height: 1.607;
   margin-top: 2.4rem;
@@ -2987,18 +2986,20 @@ html.no-csstransitions .home-content__main {
  * ## contact social
  * ------------------------------------------------------------------- */
 .contact-social {
+
   list-style: none;
   display: inline-block;
   margin: 0 0 0 0.3rem;
   font-size: 3rem;
 }
 .contact-social li {
+  color: #000000;
   margin-right: 15px;
   padding-left: 0;
   display: inline-block;
 }
 .contact-social li a {
-  color: rgba(255, 255, 255, 0.3);
+  color: #000000;
   border: none !important;
 }
 .contact-social li a:hover,
