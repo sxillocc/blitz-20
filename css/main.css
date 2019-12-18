@@ -14,6 +14,7 @@ html, body {
 }
 
 body {
+  background-color: #F0E4D3;
   font-family: "Neuton", sans-serif;
   font-size: 1.7rem;
   font-style: normal;
@@ -2826,8 +2827,7 @@ html.no-csstransitions .home-content__main {
 .s-stats {
   padding-top: 4.2rem;
   padding-bottom: 4.2rem;
-  background-color: #050505;
-  background-image: url(../images/stats-bg.jpg);
+  background: linear-gradient(180deg,#D8DFE7,#F0E4D3);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -2837,7 +2837,7 @@ html.no-csstransitions .home-content__main {
 .s-stats::before {
   display: block;
   content: "";
-  background-color: #050505;
+  /* background-color: #050505; */
   position: absolute;
   top: 0;
   left: 0;
@@ -2850,18 +2850,21 @@ html.no-csstransitions .home-content__main {
   text-align: center;
 }
 .stats__col {
+  height: 40vh;
+  width: fit-content;
   margin: 5.4rem 0;
-  padding: 0 2rem;
+  padding: 0 3rem;
   position: relative;
   overflow: hidden;
   white-space: nowrap;
 }
 .stats__count {
-  font-family: "metropolis-light", sans-serif;
-  font-size: 7rem;
+  font-family: "Neuton", sans-serif;
+  font-size: 8rem;
   line-height: 1;
-  color: #ffffff;
-  padding-bottom: 1.8rem;
+  color: #000000;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -2880,9 +2883,9 @@ html.no-csstransitions .home-content__main {
 }
 .stats h5 {
   font-family: "metropolis-regular", sans-serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: 1.333;
-  color: rgba(255, 255, 255, 0.5);
+  color: #000000;
   margin-top: 1.8rem;
   position: relative;
 }
