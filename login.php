@@ -1,5 +1,18 @@
 <?php
-	use PHPMailer\PHPMailer\PHPMailer;
+
+	date_default_timezone_set('Etc/UTC');
+	require 'PHPMailer/src/PHPMailer.php';
+	require("PHPMailer/src/SMTP.php");
+    $mail = new PHPMailer\PHPMailer\PHPMailer();
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com'; 
+    $mail->Port = 587;
+    $mail->SMTPSecure = 'tls';
+    $mail->SMTPAuth = true; 
+	//--------------------------------------------------------//
+    $mail->Username = "Your Email Id"; 
+    $mail->Password = "Your Password"; 
+	//-------------------------------------------------------//
 	$name = filter_input(INPUT_POST, 'name');
 	$email = filter_input(INPUT_POST, 'email');
 	$phone = filter_input(INPUT_POST, 'phone');
@@ -30,29 +43,18 @@
 					$sql = "INSERT INTO MNIT (colid, name, email, phone, password, course, year, branch, collegeName, city, accommondation)
 							values('$colid', '$name', '$email', '$phone', '$password', '$course', '$year', '$branch', '$college', '$city', 'accommondation');";
 					if($conn->query($sql)){
+						//----------------------------------------------------------//
+						$mail->setFrom('Your Email Id', 'Blitzchlag'); 
+						//----------------------------------------------------------//
+                        $mail->addAddress($email, $name); //
+                        $mail->Subject = 'Successfull Registration'; 
+                        $mail->Body = 'This is a plain-text message body'; 
+                        if ($mail->send()) {
+                            echo "Congratulation, You are successfull registered in Blitzchlag20.0!";
+                        } else {
+                            echo "Mailer Error: " . $mail->ErrorInfo;
+                        }
 						
-						/*include_once "PHPMailer\PHPMailer.php";
-						$mail = new PHPMailer();
-						$mail->setFrom('2018kucp1121@iiitkota.ac.in');
-						$mail->addAddress($email, $name);
-						$mail->Subject = "Please verify email";
-						$mail->isHTML(true);
-						$mail->body = "Please click the link below: <br><br>";
-						if($mail->send()){
-							$msg = "You have been registere! Please verify your email!";
-						}	
-						else{
-							$msg = "Something wrong happened! Please try again";
-						}*/
-
-						
-						/*$subject = "Email Verification";
-						$emailAdd = "2018kucp1121@iiitkota.ac.in";
-						$url = "login.php";
-						$req = "0";
-						$msg = $_POST['Name'] . ",\n\nThank you for your recent enquiry. A member of our 
-						team will respond to your message as soon as possible.";
-						mail( $_POST['email'], $conf_subject, $msg, 'From: ' . $emailAdd );*/
 						echo"success";
 						
 					}
@@ -61,11 +63,22 @@
 					}		
 				}
 				else{
-					$sql1 = "CREATE TABLE MNIT (colid varchar(10) PRIMARY KEY, name varchar(50), email varchar(40), phone varchar(10), password varchar(40), course varchar(40), year varchar(20), branch varchar(40), collegeName varchar(40), city varchar(40), accommondation varchar(40))";
+					$sql1 = "CREATE TABLE MNIT (colid varchar(20) PRIMARY KEY, name varchar(50), email varchar(40), phone varchar(10), password varchar(40), course varchar(40), year varchar(20), branch varchar(40), collegeName varchar(40), city varchar(40), accommondation varchar(40))";
 					if($conn->query($sql1)){
 						$sql = "INSERT INTO MNIT (colid, name, email, phone, password, course, year, branch, collegeName, city, accommondation)
 							values('$colid', '$name', '$email', '$phone', '$password', '$course', '$year', '$branch', '$college', '$city', 'accommondation');";
 						if($conn->query($sql)){
+							//----------------------------------------------------------//
+							$mail->setFrom('Your Email Id', 'Blitzchlag'); 
+							//----------------------------------------------------------//
+							$mail->addAddress($email, $name); //
+							$mail->Subject = 'Successfull Registration'; 
+							$mail->Body = 'Congratulation, You are successfull registered in Blitzchlag20.0!'; 
+							if ($mail->send()) {
+								echo "Congratulation, You are successfull registered in Blitzchlag20.0!";
+							} else {
+								echo "Mailer Error: " . $mail->ErrorInfo;
+							}
 							echo"success";
 						}
 						else{
@@ -84,6 +97,17 @@
 					$sql = "INSERT INTO IIITK (colid, name, email, phone, password, course, year, branch, collegeName, city, accommondation)
 							values('$colid', '$name', '$email', '$phone', '$password', '$course', '$year', '$branch', '$college', '$city', 'accommondation');";
 					if($conn->query($sql)){
+						//----------------------------------------------------------//
+						$mail->setFrom('Your Email Id', 'Blitzchlag'); 
+						//----------------------------------------------------------//
+                        $mail->addAddress($email, $name); //
+                        $mail->Subject = 'Successfull Registration'; 
+                        $mail->Body = 'Congratulation, You are successfull registered in Blitzchlag20.0!'; 
+						if ($mail->send()) {
+                            echo "Congratulation, You are successfull registered in Blitzchlag20.0!";
+                        } else {
+                            echo "Mailer Error: " . $mail->ErrorInfo;
+                        }
 						echo"success";
 					}
 					else{
@@ -91,11 +115,22 @@
 					}		
 				}
 				else{
-					$sql1 = "CREATE TABLE IIITK (colid varchar(10) PRIMARY KEY, name varchar(50), email varchar(40), phone varchar(10), password varchar(40), course varchar(40), year varchar(20), branch varchar(40), collegeName varchar(40), city varchar(40), accommondation varchar(40))";
+					$sql1 = "CREATE TABLE IIITK (colid varchar(10) PRIMARY KEY, name varchar(50), email varchar(40), phone varchar(10), password varchar(40), course varchar(20), year varchar(20), branch varchar(40), collegeName varchar(40), city varchar(40), accommondation varchar(40))";
 					if($conn->query($sql1)){
 						$sql = "INSERT INTO IIITK (colid, name, email, phone, password, course, year, branch, collegeName, city, accommondation)
 							values('$colid', '$name', '$email', '$phone', '$password', '$course', '$year', '$branch', '$college', '$city', 'accommondation');";
 						if($conn->query($sql)){
+							//----------------------------------------------------------//
+							$mail->setFrom('Your Email Id', 'Blitzchlag'); 
+							//----------------------------------------------------------//
+							$mail->addAddress($email, $name); //
+							$mail->Subject = 'Successfull Registration'; 
+							$mail->Body = 'Congratulation, You are successfull registered in Blitzchlag20.0!'; 
+							if ($mail->send()) {
+								echo "Congratulation, You are successfull registered in Blitzchlag20.0!";
+							} else {
+								echo "Mailer Error: " . $mail->ErrorInfo;
+							}
 							echo"success";
 						}
 						else{
@@ -113,6 +148,17 @@
 					$sql = "INSERT INTO NITUK (colid, name, email, phone, password, course, year, branch, collegeName, city, accommondation)
 							values('$colid', '$name', '$email', '$phone', '$password', '$course', '$year', '$branch', '$college', '$city', 'accommondation');";
 					if($conn->query($sql)){
+						//----------------------------------------------------------//
+						$mail->setFrom('Your Email Id', 'Blitzchlag'); 
+						//----------------------------------------------------------//
+                        $mail->addAddress($email, $name); //
+                        $mail->Subject = 'Successfull Registration'; 
+                        $mail->Body = 'Congratulation, You are successfull registered in Blitzchlag20.0!'; 
+						if ($mail->send()) {
+                            echo "Congratulation, You are successfull registered in Blitzchlag20.0!";
+                        } else {
+                            echo "Mailer Error: " . $mail->ErrorInfo;
+                        }
 						echo"success";
 					}
 					else{
@@ -120,11 +166,22 @@
 					}		
 				}
 				else{
-					$sql1 = "CREATE TABLE NITUK (colid varchar(10) PRIMARY KEY, name varchar(50), email varchar(40), phone varchar(10), password varchar(40), course varchar(40), year varchar(20), branch varchar(40), collegeName varchar(40), city varchar(40), accommondation varchar(40))";
+					$sql1 = "CREATE TABLE NITUK (colid varchar(20) PRIMARY KEY, name varchar(50), email varchar(40), phone varchar(10), password varchar(40), course varchar(40), year varchar(20), branch varchar(40), collegeName varchar(40), city varchar(40), accommondation varchar(40))";
 					if($conn->query($sql1)){
 						$sql = "INSERT INTO NITUK (colid, name, email, phone, password, course, year, branch, collegeName, city, accommondation)
 							values('$colid', '$name', '$email', '$phone', '$password', '$course', '$year', '$branch', '$college', '$city', 'accommondation');";
 						if($conn->query($sql)){
+							//----------------------------------------------------------//
+							$mail->setFrom('Your Email Id', 'Blitzchlag'); 
+							//----------------------------------------------------------//
+							$mail->addAddress($email, $name); //
+							$mail->Subject = 'Successfull Registration'; 
+							$mail->Body = 'Congratulation, You are successfull registered in Blitzchlag20.0!'; 
+							if ($mail->send()) {
+								echo "Congratulation, You are successfull registered in Blitzchlag20.0!";
+							} else {
+								echo "Mailer Error: " . $mail->ErrorInfo;
+							}
 							echo"success";
 						}
 						else{
@@ -143,6 +200,17 @@
 					$sql = "INSERT INTO otherCollage (colid, name, email, phone, password, course, year, branch, collegeName, city, accommondation)
 							values('$colid', '$name', '$email', '$phone', '$password', '$course', '$year', '$branch', '$college', '$city', 'accommondation');";
 					if($conn->query($sql)){
+						//----------------------------------------------------------//
+						$mail->setFrom('Your Email Id', 'Blitzchlag'); 
+						//----------------------------------------------------------//
+                        $mail->addAddress($email, $name); //
+                        $mail->Subject = 'Successfull Registration'; 
+                        $mail->Body = 'Congratulation, You are successfull registered in Blitzchlag20.0!'; 
+						if ($mail->send()) {
+                            echo "Congratulation, You are successfull registered in Blitzchlag20.0!";
+                        } else {
+                            echo "Mailer Error: " . $mail->ErrorInfo;
+                        }
 						echo"success";
 					}
 					else{
@@ -150,11 +218,22 @@
 					}		
 				}
 				else{
-					$sql1 = "CREATE TABLE otherCollage (colid varchar(10) PRIMARY KEY, name varchar(50), email varchar(40), phone varchar(10), password varchar(40), course varchar(40), year varchar(20), branch varchar(40), collegeName varchar(40), city varchar(40), accommondation varchar(40))";
+					$sql1 = "CREATE TABLE otherCollage (colid varchar(20) PRIMARY KEY, name varchar(50), email varchar(40), phone varchar(10), password varchar(40), course varchar(40), year varchar(20), branch varchar(40), collegeName varchar(40), city varchar(40), accommondation varchar(40))";
 					if($conn->query($sql1)){
 						$sql = "INSERT INTO otherCollage (colid, name, email, phone, password, course, year, branch, collegeName, city, accommondation)
 							values('$colid', '$name', '$email', '$phone', '$password', '$course', '$year', '$branch', '$college', '$city', 'accommondation');";
 						if($conn->query($sql)){
+							//----------------------------------------------------------//
+							$mail->setFrom('Your Email Id', 'Blitzchlag'); 
+							//----------------------------------------------------------//
+							$mail->addAddress($email, $name); //
+							$mail->Subject = 'Successfull Registration'; 
+							$mail->Body = 'Congratulation, You are successfull registered in Blitzchlag20.0!'; 
+							if ($mail->send()) {
+								echo "Congratulation, You are successfull registered in Blitzchlag20.0!";
+							} else {
+								echo "Mailer Error: " . $mail->ErrorInfo;
+							}
 							echo"success";
 						}
 						else{
