@@ -1,5 +1,4 @@
 <?php
-
 	date_default_timezone_set('Etc/UTC');
 	require 'PHPMailer/src/PHPMailer.php';
 	require("PHPMailer/src/SMTP.php");
@@ -10,8 +9,8 @@
     $mail->SMTPSecure = 'tls';
     $mail->SMTPAuth = true; 
 	//--------------------------------------------------------//
-    $mail->Username = "Your Email Id"; 
-    $mail->Password = "Your Password"; 
+    $mail->Username = "Your Email"; 
+    $mail->Password = "Password"; 
 	//-------------------------------------------------------//
 	$name = filter_input(INPUT_POST, 'name');
 	$email = filter_input(INPUT_POST, 'email');
@@ -37,18 +36,20 @@
 			die('Connect Error ('.mysqli_connect_error().')'.mysqli_connect_error());
 		}	
 		else{
+			$en1 = encryptIt($colid);
 			if($college == "MNIT"){
 				$table = "MNIT";
+				$en2 = encryptIt($table);
 				if(($conn->query("SHOW TABLES LIKE '".$table."'"))->num_rows == 1){
 					$sql = "INSERT INTO MNIT (colid, name, email, phone, password, course, year, branch, collegeName, city, accommondation)
 							values('$colid', '$name', '$email', '$phone', '$password', '$course', '$year', '$branch', '$college', '$city', 'accommondation');";
 					if($conn->query($sql)){
 						//----------------------------------------------------------//
-						$mail->setFrom('Your Email Id', 'Blitzchlag'); 
+						$mail->setFrom('sat.test1000@gmail.com', 'Blitzchlag'); 
 						//----------------------------------------------------------//
                         $mail->addAddress($email, $name); //
                         $mail->Subject = 'Successfull Registration'; 
-                        $mail->Body = 'This is a plain-text message body'; 
+                        $mail->Body = "Congratulation, {$name} \t\t\t\t\n Your are successfully registered in Blitzchlag20.0 \n verify your email http://localhost/blitz-20/email.php?en1={$en1}&en2={$en2}"; 
                         if ($mail->send()) {
                             echo "Congratulation, You are successfull registered in Blitzchlag20.0!";
                         } else {
@@ -63,17 +64,19 @@
 					}		
 				}
 				else{
+					$table = "MNIT";
+					$en2 = encryptIt($table);
 					$sql1 = "CREATE TABLE MNIT (colid varchar(20) PRIMARY KEY, name varchar(50), email varchar(40), phone varchar(10), password varchar(40), course varchar(40), year varchar(20), branch varchar(40), collegeName varchar(40), city varchar(40), accommondation varchar(40))";
 					if($conn->query($sql1)){
 						$sql = "INSERT INTO MNIT (colid, name, email, phone, password, course, year, branch, collegeName, city, accommondation)
 							values('$colid', '$name', '$email', '$phone', '$password', '$course', '$year', '$branch', '$college', '$city', 'accommondation');";
 						if($conn->query($sql)){
 							//----------------------------------------------------------//
-							$mail->setFrom('Your Email Id', 'Blitzchlag'); 
+							$mail->setFrom('sat.test1000@gmail.com', 'Blitzchlag'); 
 							//----------------------------------------------------------//
 							$mail->addAddress($email, $name); //
 							$mail->Subject = 'Successfull Registration'; 
-							$mail->Body = 'Congratulation, You are successfull registered in Blitzchlag20.0!'; 
+							$mail->Body = "Congratulation, {$name} \t\t\t\t\n Your are successfully registered in Blitzchlag20.0 \n verify your email http://localhost/blitz-20/email.php?en1={$en1}&en2={$en2}";
 							if ($mail->send()) {
 								echo "Congratulation, You are successfull registered in Blitzchlag20.0!";
 							} else {
@@ -93,16 +96,17 @@
 			}
 			else if($college == "IIIT Kota"){
 				$table = "IIITK";
+				$en2 = encryptIt($table);
 				if(($conn->query("SHOW TABLES LIKE '".$table."'"))->num_rows == 1){
 					$sql = "INSERT INTO IIITK (colid, name, email, phone, password, course, year, branch, collegeName, city, accommondation)
 							values('$colid', '$name', '$email', '$phone', '$password', '$course', '$year', '$branch', '$college', '$city', 'accommondation');";
 					if($conn->query($sql)){
 						//----------------------------------------------------------//
-						$mail->setFrom('Your Email Id', 'Blitzchlag'); 
+						$mail->setFrom('sat.test1000@gmail.com', 'Blitzchlag'); 
 						//----------------------------------------------------------//
                         $mail->addAddress($email, $name); //
                         $mail->Subject = 'Successfull Registration'; 
-                        $mail->Body = 'Congratulation, You are successfull registered in Blitzchlag20.0!'; 
+                        $mail->Body = "Congratulation, {$name} \t\t\t\t\n Your are successfully registered in Blitzchlag20.0 \n verify your email http://localhost/blitz-20/email.php?en1={$en1}&en2={$en2}"; 
 						if ($mail->send()) {
                             echo "Congratulation, You are successfull registered in Blitzchlag20.0!";
                         } else {
@@ -115,17 +119,19 @@
 					}		
 				}
 				else{
+					$table = "IIITK";
+					$en2 = encryptIt($table);
 					$sql1 = "CREATE TABLE IIITK (colid varchar(10) PRIMARY KEY, name varchar(50), email varchar(40), phone varchar(10), password varchar(40), course varchar(20), year varchar(20), branch varchar(40), collegeName varchar(40), city varchar(40), accommondation varchar(40))";
 					if($conn->query($sql1)){
 						$sql = "INSERT INTO IIITK (colid, name, email, phone, password, course, year, branch, collegeName, city, accommondation)
 							values('$colid', '$name', '$email', '$phone', '$password', '$course', '$year', '$branch', '$college', '$city', 'accommondation');";
 						if($conn->query($sql)){
 							//----------------------------------------------------------//
-							$mail->setFrom('Your Email Id', 'Blitzchlag'); 
+							$mail->setFrom('sat.test1000@gmail.com', 'Blitzchlag'); 
 							//----------------------------------------------------------//
 							$mail->addAddress($email, $name); //
 							$mail->Subject = 'Successfull Registration'; 
-							$mail->Body = 'Congratulation, You are successfull registered in Blitzchlag20.0!'; 
+							$mail->Body = "Congratulation, {$name} \t\t\t\t\n Your are successfully registered in Blitzchlag20.0 \n verify your email http://localhost/blitz-20/email.php?en1={$en1}&en2={$en2}"; 
 							if ($mail->send()) {
 								echo "Congratulation, You are successfull registered in Blitzchlag20.0!";
 							} else {
@@ -144,16 +150,17 @@
 			}
 			else if($college == "NIT UK"){
 				$table = "NITUK";
+				$en2 = encryptIt($table);
 				if(($conn->query("SHOW TABLES LIKE '".$table."'"))->num_rows == 1){
 					$sql = "INSERT INTO NITUK (colid, name, email, phone, password, course, year, branch, collegeName, city, accommondation)
 							values('$colid', '$name', '$email', '$phone', '$password', '$course', '$year', '$branch', '$college', '$city', 'accommondation');";
 					if($conn->query($sql)){
 						//----------------------------------------------------------//
-						$mail->setFrom('Your Email Id', 'Blitzchlag'); 
+						$mail->setFrom('sat.test1000@gmail.com', 'Blitzchlag'); 
 						//----------------------------------------------------------//
                         $mail->addAddress($email, $name); //
                         $mail->Subject = 'Successfull Registration'; 
-                        $mail->Body = 'Congratulation, You are successfull registered in Blitzchlag20.0!'; 
+                        $mail->Body = "Congratulation, {$name} \t\t\t\t\n Your are successfully registered in Blitzchlag20.0 \n verify your email http://localhost/blitz-20/email.php?en1={$en1}&en2={$en2}"; 
 						if ($mail->send()) {
                             echo "Congratulation, You are successfull registered in Blitzchlag20.0!";
                         } else {
@@ -166,17 +173,19 @@
 					}		
 				}
 				else{
+					$table = "NITUK";
+					$en2 = encryptIt($table);
 					$sql1 = "CREATE TABLE NITUK (colid varchar(20) PRIMARY KEY, name varchar(50), email varchar(40), phone varchar(10), password varchar(40), course varchar(40), year varchar(20), branch varchar(40), collegeName varchar(40), city varchar(40), accommondation varchar(40))";
 					if($conn->query($sql1)){
 						$sql = "INSERT INTO NITUK (colid, name, email, phone, password, course, year, branch, collegeName, city, accommondation)
 							values('$colid', '$name', '$email', '$phone', '$password', '$course', '$year', '$branch', '$college', '$city', 'accommondation');";
 						if($conn->query($sql)){
 							//----------------------------------------------------------//
-							$mail->setFrom('Your Email Id', 'Blitzchlag'); 
+							$mail->setFrom('sat.test1000@gmail.com', 'Blitzchlag'); 
 							//----------------------------------------------------------//
 							$mail->addAddress($email, $name); //
 							$mail->Subject = 'Successfull Registration'; 
-							$mail->Body = 'Congratulation, You are successfull registered in Blitzchlag20.0!'; 
+							$mail->Body = "Congratulation, {$name} \t\t\t\t\n Your are successfully registered in Blitzchlag20.0 \n verify your email http://localhost/blitz-20/email.php?en1={$en1}&en2={$en2}"; 
 							if ($mail->send()) {
 								echo "Congratulation, You are successfull registered in Blitzchlag20.0!";
 							} else {
@@ -195,17 +204,18 @@
 			}
 			else{
 				$table = "otherCollage";
+				$en2 = encryptIt($table);
 				$college = $collegeName;
 				if(($conn->query("SHOW TABLES LIKE '".$table."'"))->num_rows == 1){
 					$sql = "INSERT INTO otherCollage (colid, name, email, phone, password, course, year, branch, collegeName, city, accommondation)
 							values('$colid', '$name', '$email', '$phone', '$password', '$course', '$year', '$branch', '$college', '$city', 'accommondation');";
 					if($conn->query($sql)){
 						//----------------------------------------------------------//
-						$mail->setFrom('Your Email Id', 'Blitzchlag'); 
+						$mail->setFrom('sat.test1000@gmail.com', 'Blitzchlag'); 
 						//----------------------------------------------------------//
                         $mail->addAddress($email, $name); //
                         $mail->Subject = 'Successfull Registration'; 
-                        $mail->Body = 'Congratulation, You are successfull registered in Blitzchlag20.0!'; 
+                        $mail->Body = "Congratulation, {$name} \t\t\t\t\n Your are successfully registered in Blitzchlag20.0 \n verify your email http://localhost/blitz-20/email.php?en1={$en1}&en2={$en2}"; 
 						if ($mail->send()) {
                             echo "Congratulation, You are successfull registered in Blitzchlag20.0!";
                         } else {
@@ -218,17 +228,19 @@
 					}		
 				}
 				else{
+					$table = "otherCollage";
+					$en2 = encryptIt($table);
 					$sql1 = "CREATE TABLE otherCollage (colid varchar(20) PRIMARY KEY, name varchar(50), email varchar(40), phone varchar(10), password varchar(40), course varchar(40), year varchar(20), branch varchar(40), collegeName varchar(40), city varchar(40), accommondation varchar(40))";
 					if($conn->query($sql1)){
 						$sql = "INSERT INTO otherCollage (colid, name, email, phone, password, course, year, branch, collegeName, city, accommondation)
 							values('$colid', '$name', '$email', '$phone', '$password', '$course', '$year', '$branch', '$college', '$city', 'accommondation');";
 						if($conn->query($sql)){
 							//----------------------------------------------------------//
-							$mail->setFrom('Your Email Id', 'Blitzchlag'); 
+							$mail->setFrom('sat.test1000@gmail.com', 'Blitzchlag'); 
 							//----------------------------------------------------------//
 							$mail->addAddress($email, $name); //
 							$mail->Subject = 'Successfull Registration'; 
-							$mail->Body = 'Congratulation, You are successfull registered in Blitzchlag20.0!'; 
+							$mail->Body = "Congratulation, {$name} \t\t\t\t\n Your are successfully registered in Blitzchlag20.0 \n verify your email http://localhost/blitz-20/email.php?en1={$en1}&en2={$en2}"; 
 							if ($mail->send()) {
 								echo "Congratulation, You are successfull registered in Blitzchlag20.0!";
 							} else {
@@ -248,6 +260,11 @@
 		}
 		$conn->close();
 	}
+	function encryptIt( $q ) {
+    $cryptKey  = 'qJB0rGtIn5UB1xG03efyCp';
+    $qEncoded      = base64_encode( mcrypt_encrypt( MCRYPT_RIJNDAEL_256, md5( $cryptKey ), $q, MCRYPT_MODE_CBC, md5( md5( $cryptKey ) ) ) );
+    return( $qEncoded );
+}
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
