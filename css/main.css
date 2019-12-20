@@ -475,8 +475,6 @@ form,
   display: none;
 }
 
-
-
 /* ===================================================================
  * # preloader
  *
@@ -564,7 +562,8 @@ select {
   display: block;
   height: 5rem;
   padding: 1rem 6rem;
-  border: 0;
+  border-radius: 100px;
+  border :2px solid;
   outline: none;
   color: #451621;
   font-family: "Neuton", sans-serif;
@@ -726,6 +725,8 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
+  border-radius: 100px;
+  border: 3px solid;
   display: inline-block;
   font-family: "metropolis-semibold", sans-serif;
   font-size: 1.2rem;
@@ -1185,7 +1186,17 @@ input::-moz-focus-inner {
   line-height: 1.3125;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
-  color: #000000;
+  color: #00ff80;
+  margin-top: 0;
+  margin-bottom: 2.1rem;
+}
+.subhead1 {
+  font-family: "Neuton", sans-serif;
+  font-size: 3rem;
+  line-height: 1.3125;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: #000;
   margin-top: 0;
   margin-bottom: 2.1rem;
 }
@@ -1493,6 +1504,7 @@ input::-moz-focus-inner {
   transition: all 0.5s ease-in-out;
 }
 .header-menu-toggle::before {
+  color:black;
   display: inline-block;
   content: "Menu";
   height: 45px;
@@ -1523,6 +1535,7 @@ input::-moz-focus-inner {
   margin-top: -1px;
   right: auto;
   bottom: auto;
+  color:black;
   background-color: white;
   position: absolute;
   left: 11px;
@@ -2522,11 +2535,13 @@ html.no-csstransitions .home-content__main {
 
 .item-folio__project-link {
   z-index: 500;
+  border-radius:50px;
+  border:.5 solid;
   display: block;
   font-family: "metropolis-semibold", sans-serif;
   font-size: 1.3rem;
   color: #ffffff;
-  background-color: #000000;
+  background-color: #bf00ff;
   padding: 0.6rem 1.2rem;
   position: absolute;
   top: 3rem;
@@ -2935,15 +2950,22 @@ html.no-csstransitions .home-content__main {
 .s-contact {
   height: 120vh;
   padding-bottom: 10rem;
-  color: #000000;
+  color: #000;
   position: relative;
   font-size: 1rem;
 }
+
 .s-contact a {
   color: #000000;
   border-bottom: 1px solid transparent;
   display: inline-block;
 }
+.s-contact1 a {
+  color: #000000;
+  border-bottom: 1px solid transparent;
+  display: inline-block;
+}
+
 .s-contact a:hover,
 .s-contact a:focus {
   border-bottom: 2px solid rgba(255, 255, 255);
@@ -2982,6 +3004,14 @@ html.no-csstransitions .home-content__main {
 }
 
 .contact-address {
+  color: #ffff00;
+  font-family: "Neuton", sans-serif;
+  font-size: 2.8rem;
+  line-height: 1.607;
+  margin-top: 2.4rem;
+}
+.contact1-address {
+  color: #000;
   font-family: "Neuton", sans-serif;
   font-size: 2.8rem;
   line-height: 1.607;
@@ -3006,7 +3036,11 @@ html.no-csstransitions .home-content__main {
   display: inline-block;
 }
 .contact-social li a {
-  color: #000000;
+  color: #ff8533;
+  border: none !important;
+}
+.contact-social li a {
+  color: #ff8533;
   border: none !important;
 }
 .contact-social li a:hover,
@@ -3368,5 +3402,7 @@ html.no-csstransitions .home-content__main {
     display: none;
   }
 }
+
+
 
 /*# sourceMappingURL=main.css.map */

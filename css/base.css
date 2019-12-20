@@ -356,6 +356,7 @@ h3,
 h4,
 h5,
 h6 {
+    
     -webkit-font-smoothing: auto;
     -webkit-font-smoothing: antialiased;
     -webkit-font-variant-ligatures: common-ligatures;
