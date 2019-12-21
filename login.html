@@ -123,8 +123,8 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                <label for="recipient-name" class="form-control-label">Confirm Password <span class="mendatri-field">*</span></label>
-                                <input type="password" name="password" class="form-control" data-parsley-equalto="#pass" placeholder="Enter confirm password" required="">
+                                <label for="recipient-name" class="form-control-label">Confirm Password <span class="mendatri-field">*</span> <i id="message"></i></label>
+                                <input type="password" name="password" id="conf_pass" class="form-control" data-parsley-equalto="#pass" placeholder="Enter confirm password" required="">
                             </div>
                                 </div>
                             </div>
@@ -391,6 +391,23 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        function checkcollege(e){
+            if(e.value === "Others"){
+                document.getElementById("othercollege").disabled = false;
+                
+            }else
+            document.getElementById("othercollege").disabled = true;
+
+        }
+        $('#conf_pass').on('keyup', function () {
+            if ($('#pass').val() == $('#conf_pass').val()) {
+                $('#message').html('  Matched').css('color', 'green').removeClass('fa fa-times-circle').addClass('fa fa-check-circle');
+            } else 
+                $('#message').html(' Not Matching').css('color', 'red').removeClass('fa fa-check-circle').addClass('fa fa-times-circle');
+        });
+    </script>
 
 </body>
 
