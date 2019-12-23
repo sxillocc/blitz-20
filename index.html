@@ -8,7 +8,7 @@
     <title>Blitzschlag'20 | MNIT Jaipur</title>
     <meta name="description" content="">
     <meta name="author" content="">
-
+  
     <!-- mobile specific metas
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/preLoader.css">
     <link rel="stylesheet" href="animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
@@ -31,9 +32,12 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-</head>
+</head> 
 
 <body id="top">
+    <!-- <div id="preload">
+         <img src="images/blitz.jpg" alt="blitz"  id="blitzslag" >
+    </div> -->
 
     <!-- header
     ================================================== -->
@@ -96,27 +100,6 @@
 
        
 
-        <ul class="home-social">
-            <li class="home-social-title">Follow Us</li>
-            <li><a href="#0">
-                <i class="fab fa-facebook"></i>
-                <span class="home-social-text">Facebook</span>
-            </a></li>
-            <li><a href="#0">
-                <i class="fab fa-instagram"></i>
-                <span class="home-social-text">Instagram</span>
-            </a></li>
-            <li><a href="#0">
-                <i class="fab fa-linkedin"></i>
-                <span class="home-social-text">LinkedIn</span>
-            </a></li>
-<!------------------------------------------------------------------------------------------------->			
-            <li><a href="login.php">
-                <i class="fab fa-register"></i>
-                <span>Register</span>
-            </a></li>
-<!------------------------------------------------------------------------------------------------->			
-        </ul> <!-- end home-social -->
 
         <a href="#about" class="home-scroll smoothscroll">
             <span class="animated bounce infinite home-scroll__text">Scroll Down</span>
@@ -227,7 +210,7 @@
 
                     <ul class="contact-social">
                         <li>
-                            <a href="#0">Register</i></a>
+                            <a href="#0" style=>Register</i></a>
                         </li>
                         <li>
                             <a href="#0">Accomodation</i></a>
@@ -241,18 +224,20 @@
 
             <div class="col-seven tab-full contact-secondary" data-aos="fade-up">
                 <h3 class="subhead subhead--light">Follow Us</h3>
-
-                <ul class="contact-social">
-                    <li>
-                        <a href="#0"><i class="fab fa-facebook"></i></a>
-                    </li>
-                    <li>
-                        <a href="#0"><i class="fab fa-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a href="#0"><i class="fab fa-instagram"></i></a>
-                    </li>
-                </ul> <!-- end contact-social -->
+                  <div class="ssocial">
+                    <ul class="contact-social">
+                        <li>
+                            <a href="#0"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#0"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#0"><i class="fab fa-instagram"></i></a>
+                        </li>
+                    </ul> <!-- end contact-social -->
+                  </div>
+                
 
                 
             </div> <!-- end contact-secondary -->
@@ -327,3 +312,4 @@
 </body>
 
 </html>
+
