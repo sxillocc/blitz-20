@@ -11,13 +11,14 @@
   
     <!-- mobile specific metas
     ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <!-- CSS
     ================================================== -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/background.css">
     <link rel="stylesheet" href="css/preLoader.css">
     <link rel="stylesheet" href="animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
@@ -32,6 +33,9 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+    <!-- materialize css and js
+    ================================================== -->
+    <link rel="stylesheet" href="css/materialize.min.css">
 </head> 
 
 <body id="top">
@@ -109,68 +113,56 @@
     </section> <!-- end s-home -->
 
 
-    <!-- about
-    ================================================== -->
-        <section style="background:url(./images/lights1.jpg); background-size: cover; background-position-x: center;" id="about" class="s-about">
-
-        <div class="row section-header" data-aos="fade-up">
-            <div class="col-full">
-                <h3 class="subhead">About Us</h3>
-                <h1 class="display-1 glow">Malaviya National Institute of Technology is a Gibraltar of technological learning, imparting thousands of students, world class education, nurturing their skills to produce future leaders. Blitzschlag, MNIT's annual cultural mega-event, with a decade long glorious history, is synonymous with a wholesome cultural carnival throughout Rajasthan, due to its unparalleled grandeur. Every year, Blitzschlag invites innumerable students from all over India, presenting an unmissable opportunity to savour all the cultural enjoyment these 3 days can accommodate. With a plethora of events and cultural competitions, Blitzschlag escalates the euphoria of the participants to its pinnacle. Topping the benchmark set by the precedent year, Blitzschlag keeps revamping itself each year, perpetually raising the standards of the event. With a footfall of over 25000, Blitzschlag gathers everyone, right from nationwide prominent speakers, to amazing artists who elevate the cultural enthusiasm. Hence Blitzschlag is known as a cultural bonanza, spreading its wings across life, work, passion .Moreover, Blitzschlag infuses social awareness among the young citizens of the country, thus fulfilling its responsibility to foster society's well-being.</h1>
-            </div>
-        </div> <!-- end section-header -->
-
-        <div class="row" data-aos="fade-up">
-            <div class="col-full">
-                <p class="lead">
-                 
-                </p>
-            </div>
-        </div> <!-- end about-desc -->
-
-        
-
-    </section> <!-- end s-about -->
-
-
-    <!-- services
-    ================================================== -->
-    <section style="background: url(./images/lights.jpg); background-size: cover; background-position-x: center;" id='theme' class="s-services light-gray animated flash">
-
-        <div class="row section-header" data-aos="fade-down">
-            <div class="col-full"> <br> <br> <br> <br>
-                <h3 class="subhead">Theme</h3>
-                <h1 style="text-align: justify;" class="display-1">Although the term 'Bollywood' was popularized only in the 1970s, Bollywood has been a major part of Indian culture for years before that. Blitzschlag 2020 pays homage to an aspect of our culture that has borne many icons, set pioneering trends, and become a much-loved household name. From the iconic 'angry young man' characters and dastardly villains, to thought-provoking movies with a social message, and blockbuster 'masala' movies, Bollywood has something for everyone, and that's the case for Blitzschlag 2020! Music, dance, drama, and more await you in a feast for the senses, so join us as we treat you to a panoply of performances and competitions set in the heart of Rajasthan.  <br> <br> <center>Padhaaro mhaare Bollywood!</center></h1>
-            </div>
-        </div> <!-- end section-header -->
-
-        <div class="row" data-aos="fade-up">
-            <div class="col-full">
-                <p class="lead">
-               
-                </p>
+    <div class="light_bg upper_light" id="about">
+        <div class="row" style="margin-bottom:-20px;">
+            <div class="col s10 m8 offset-s1 offset-m2">
+                <div class="section bg-trans-m" style="margin-top:15px; margin-bottom: 15px;">
+                    <h3>About Us</h3>
+                    <p class="flow-text center-align">
+                        Malaviya National Institute of Technology is a Gibraltar of technological learning, imparting thousands of students, world class education, nurturing their skills to produce future leaders. Blitzschlag, MNIT's annual cultural mega-event, with a decade long glorious history, is synonymous with a wholesome cultural carnival throughout Rajasthan, due to its unparalleled grandeur. Every year, Blitzschlag invites innumerable students from all over India, presenting an unmissable opportunity to savour all the cultural enjoyment these 3 days can accommodate. With a plethora of events and cultural competitions, Blitzschlag escalates the euphoria of the participants to its pinnacle. Topping the benchmark set by the precedent year, Blitzschlag keeps revamping itself each year, perpetually raising the standards of the event. With a footfall of over 25000, Blitzschlag gathers everyone, right from nationwide prominent speakers, to amazing artists who elevate the cultural enthusiasm. Hence Blitzschlag is known as a cultural bonanza, spreading its wings across life, work, passion .Moreover, Blitzschlag infuses social awareness among the young citizens of the country, thus fulfilling its responsibility to foster society's well-being.
+                    </p>
+                </div>
             </div>
         </div>
+    </div>
+    <img src="images/mid_light_m.png" width="100%" class="mid_up_lm">
+    <img src="images/mid_light.png" width="100%" class="mid_up_l">
+    <div id="theme"></div>
+    <img src="images/mid_light_m.png" width="100%" class="mid_down_lm">
+    <img src="images/mid_light.png" width="100%" class="mid_down_l">
+    <div class="light_bg bottom_light">
+        <div class="row" >
+            <div class="col s10 m8 offset-s1 offset-m2">
+                <div class="section bg-trans-m" style="margin-top:15px; margin-bottom: 15px;">
+                    <h3>Theme</h3>
+                    <p class="flow-text center-align">
+                        Although the term 'Bollywood' was popularized only in the 1970s, Bollywood has been a major part of Indian culture for years before that. Blitzschlag 2020 pays homage to an aspect of our culture that has borne many icons, set pioneering trends, and become a much-loved household name. From the iconic 'angry young man' characters and dastardly villains, to thought-provoking movies with a social message, and blockbuster 'masala' movies, Bollywood has something for everyone, and that's the case for Blitzschlag 2020! Music, dance, drama, and more await you in a feast for the senses, so join us as we treat you to a panoply of performances and competitions set in the heart of Rajasthan.
+                    </p>
+                    <h4 class="flow-text center-align">
+                        Padhaaro mhaare Bollywood!
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        
-    </section>
     <section id="stats" class="s-stats">
 
         <div class="row stats block-1-4 block-m-1-2 block-mob-full animated flash infinite slower" data-aos="fade-up">
                 
-            <div style="background: url(./images/curtain.png); background-size:15em; background-position: center; background-repeat: no-repeat; " class="col-block stats__col ">
+            <div class="col s12 m3 stats__col " style="background: url(./images/curtain.png); background-size:15em; background-position: center; background-repeat: no-repeat; ">
                 <div class="stats__count animated bounce infinite slower">4</div>
                 <h5 class="animated flash infinite slower" >Days</h5class="animated flash infinite">
             </div>
-            <div style="background: url(./images/curtain.png); background-size:15em; background-position: center; background-repeat: no-repeat; " class="col-block stats__col">
+            <div class="col s12 m3 stats__col" style="background: url(./images/curtain.png); background-size:15em; background-position: center; background-repeat: no-repeat; ">
                 <div class="stats__count animated bounce infinite slower">50</div>
                 <h5 class="animated flash infinite slower">Events</h5>
             </div>
-            <div style="background: url(./images/curtain.png); background-size:15em; background-position: center; background-repeat: no-repeat; " class="col-block stats__col">
+            <div class="col s12 m3 stats__col" style="background: url(./images/curtain.png); background-size:15em; background-position: center; background-repeat: no-repeat; ">
                 <div class="stats__count animated bounce infinite slower">70</div>
                 <h5 class="animated flash infinite slower">Participating Colleges</h5>
             </div>
-            <div style="background: url(./images/curtain.png); background-size:15em; background-position: center; background-repeat: no-repeat; " class="col-block stats__col">
+            <div class="col s12 m3 stats__col" style="background: url(./images/curtain.png); background-size:15em; background-position: center; background-repeat: no-repeat; ">
                 <div class="stats__count animated bounce infinite slower">25000</div>
                 <h5 class="animated flash infinite slower">Footfall</h5> 
             </div>
@@ -308,8 +300,20 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/materialize.min.js"></script>
 
 </body>
 
 </html>
 
+<!-- <div id="about" class="row" style="height:100%; 
+            background-image: url(./images/lights1.jpg); background-size: contain; 
+            background-position-x: center;
+            background-repeat: no-repeat;">
+            <div class="col s10 m8 offset-s1 offset-m2">
+                <h1>About Us</h1>
+                <p class="flow-text">
+                    Malaviya National Institute of Technology is a Gibraltar of technological learning, imparting thousands of students, world class education, nurturing their skills to produce future leaders. Blitzschlag, MNIT's annual cultural mega-event, with a decade long glorious history, is synonymous with a wholesome cultural carnival throughout Rajasthan, due to its unparalleled grandeur. Every year, Blitzschlag invites innumerable students from all over India, presenting an unmissable opportunity to savour all the cultural enjoyment these 3 days can accommodate. With a plethora of events and cultural competitions, Blitzschlag escalates the euphoria of the participants to its pinnacle. Topping the benchmark set by the precedent year, Blitzschlag keeps revamping itself each year, perpetually raising the standards of the event. With a footfall of over 25000, Blitzschlag gathers everyone, right from nationwide prominent speakers, to amazing artists who elevate the cultural enthusiasm. Hence Blitzschlag is known as a cultural bonanza, spreading its wings across life, work, passion .Moreover, Blitzschlag infuses social awareness among the young citizens of the country, thus fulfilling its responsibility to foster society's well-being.
+                </p>
+            </div>
+        </div> -->

@@ -1,0 +1,63 @@
+.light_bg{
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
+}
+.upper_light{
+    background-position-y: bottom;
+    background-image: url('../images/up_light_m.png');
+}
+.bottom_light{
+    background-position-y: top;
+    background-image: url('../images/down_light_m.png');
+}
+.mid_up_lm{
+    display: block;
+}
+.mid_down_lm{
+    display: block;
+    transform: scaleY(-1);
+}
+.mid_up_l{
+    display: none;
+}
+.mid_down_l{
+    display: none;
+}
+
+@media only screen and (min-width: 601px) {
+    .mid_up_lm{
+        display: none;
+    }
+    .mid_down_lm{
+        display: none;
+    }    
+    .mid_up_l{
+        display: block;
+    }
+    .mid_down_l{
+        display: block;
+        transform: scaleY(-1);
+    }
+    .upper_light{
+        background-position-y: bottom;
+        background-image: url('../images/up_light.png');
+    }
+    .bottom_light{
+        background-position-y: top;
+        background-image: url('../images/down_light.png');
+    }
+}
+
+@media only screen and (max-width: 601px) {
+    .bg-trans-m{
+        background-color: rgba(255, 255, 255, 0.1);
+        color: black;
+        padding-left: 8px;
+        padding-right: 5px; 
+    }
+}
+
+.stats .col{
+    margin: 0 0 0 0;
+}
